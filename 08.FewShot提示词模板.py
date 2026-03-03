@@ -25,5 +25,6 @@ print(prompt_text)
 
 model = Tongyi(model="qwen-plus")
 print(model.invoke(input=prompt_text))
+print(type(model.invoke(input=prompt_text)))
 
 
