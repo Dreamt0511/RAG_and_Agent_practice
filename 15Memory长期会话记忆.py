@@ -1,9 +1,17 @@
 from langchain_community.chat_models.tongyi import ChatTongyi
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate,MessagesPlaceholder
-from langchain_core.chat_history import InMemoryChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
-#from langchain_community.chat_message_histories import FileChatMessageHistory长期会话记忆库
+from langchain_community.chat_message_histories import FileChatMessageHistory
+import os
+"""
+只需要提供 get_history 函数返回一个支持 add_message 的历史对象
+RunnableWithMessageHistory 内部会自动调用 add_user_message 和 add_ai_message
+FileChatMessageHistory 的 add_message 方法负责写入文件
+"""
+
+# 创建存储历史对话的目录
+os.makedirs("./chat_histories", exist_ok=True)
 
 model = ChatTongyi(model="qwen-max")
 str_parser = StrOutputParser()
@@ -23,11 +31,13 @@ def print_prompt(prompt):
 
 base_chain = prompt | print_prompt | model | str_parser
 
-store = {}
-def get_history(sessionId):
-    if sessionId not in store:
-        store[sessionId] = InMemoryChatMessageHistory()
-    return store[sessionId]
+# ===== 只需要修改这里！=====
+def get_history(sessionId: str):
+    """返回文件存储的历史记录"""
+    # 每个会话一个文件，存在 ./chat_histories/ 目录下
+    file_path = f"./chat_histories/{sessionId}.json"
+    return FileChatMessageHistory(file_path)
+# =========================
 
 chain_with_history = RunnableWithMessageHistory(
     base_chain,
@@ -41,9 +51,24 @@ chain_with_history = RunnableWithMessageHistory(
 if __name__ == "__main__":
     session_config = {"configurable":{"session_id":"Dreamt"}}
 
+
+    #有存储的长期对话历史的话就可以删除前期的几个补充说明了
+    """
     print(chain_with_history.invoke({"input":"我家有一只猫"},session_config))
     print(chain_with_history.invoke({"input": "我家还有2只兔子"},session_config))
     print(chain_with_history.invoke({"input":"还有一条大狗狗"},session_config))
-    print(chain_with_history.invoke({"input":"请问一共有几只宠物"},session_config))
+    """
+
+    #传入session_id查看存储的长期历史对话
+    history = get_history("Dreamt")
+    history_messages = history.messages
+    print(f"读取到的历史对话如下：\n")
+    for i,msg in enumerate(history_messages):
+        print(f"第{i+1}条：{msg.content}")
+    print(f"\n读取到{len(history_messages)}条历史消息")
+
+    #在下面添加提问
+    #print(chain_with_history.invoke({"input":"你是谁"},session_config))
+
 
 
