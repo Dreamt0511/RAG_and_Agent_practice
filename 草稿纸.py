@@ -1,23 +1,21 @@
-from langchain_core.prompts import PromptTemplate, FewShotPromptTemplate
-from langchain_community.llms.tongyi import Tongyi
+from langchain_core.chat_history import InMemoryChatMessageHistory
 
-example_template = PromptTemplate.from_template("单词{word}，反义词{antonym}")
+# 创建一个历史记录对象
+history = InMemoryChatMessageHistory()
 
-examples_data = [
-    {"word": "big", "antonym": "small"},
-    {"word": "left", "antonym": "right"}
-]
+# 添加消息
+history.add_user_message("你好，我叫小明")
+history.add_ai_message("你好小明，有什么可以帮你的？")
+history.add_user_message("今天天气怎么样？")
+history.add_ai_message("抱歉，我暂时无法查询天气。")
 
-few_shot_template = FewShotPromptTemplate(
-    example_prompt=example_template,
-    examples=examples_data,
-    prefix="告知我单词的反义词，我提供的示例如下",
-    suffix="回复格式按照前面的示例告诉我（如果遇到不太符合的情况请回复暂未知晓，不要做过多解释），{input_word}的反义词是？",
-    input_variables=["input_word"]
-)
+# 获取所有消息
+messages = history.messages
+for msg in messages:
+    print(f"{msg}\n")
+print(messages)
+# 输出: [HumanMessage(...), AIMessage(...), HumanMessage(...), AIMessage(...)]
 
-
-prompt_text = few_shot_template.invoke(input={"input_word":"down"}).to_string()
-model = Tongyi(model= "qwen-max")
-print(prompt_text)
-print(model.invoke(prompt_text))
+# 获取最新消息
+last_message = history.messages[-1]
+print(last_message.content)  # "抱歉，我暂时无法查询天气。"
