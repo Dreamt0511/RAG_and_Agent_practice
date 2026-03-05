@@ -4,6 +4,9 @@ from langchain_chroma import Chroma
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 import os
+import time
+
+start_time = time.time()
 
 # 获取向量对象
 vector_store = Chroma(
@@ -50,6 +53,9 @@ print("\n","="*100)
 print("AI回复如下")
 for chunk in response:
     print(chunk,end="",flush=True)
+
+consume_seconds = time.time() - start_time
+print(f"\n系统执行时长为{consume_seconds}")
 
 
 
