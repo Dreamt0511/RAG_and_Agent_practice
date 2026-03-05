@@ -15,7 +15,7 @@ vector_store = Chroma(
 # 构建提示词模板
 prompt = ChatPromptTemplate.from_messages(
     [
-        ("system", "以我提供的资料为主，根据资料内容回答用户问题，简洁为主，参考资料：{context}"),
+        ("system", "以我提供的资料为主，根据资料内容回答用户问题，简洁为主，如果参考资料不符合用户提问，请回复：未检索到相关资料，参考资料：{context}"),
         ("user", "用户提问：{question}")
     ]
 )
@@ -26,7 +26,7 @@ model = ChatTongyi(
 )
 
 str_parser = StrOutputParser()
-q = "AI 时代会不会淘汰程序员？"
+q = "大模型应用开发的路线是什么"
 
 #构建链
 chain = prompt | model | str_parser
@@ -36,7 +36,7 @@ reference_list = []
 
 #从向量数据库中检索相关信息
 res = vector_store.similarity_search(
-    q,3
+    q,5
 )
 #添加相关信息进列表
 for doc in res:
@@ -44,10 +44,13 @@ for doc in res:
 
 reference_context = ','.join(reference_list)
 #把问题和参考一起发给ai进行提问
-response = chain.invoke(input={"question":q,"context":reference_context})
+response = chain.stream(input={"question":q,"context":reference_context})
 print(f"参考原文：\n{reference_context}")
 print("\n","="*100)
-print(f"AI回复：\n{response}")
+print("AI回复如下")
+for chunk in response:
+    print(chunk,end="",flush=True)
+
 
 
 
