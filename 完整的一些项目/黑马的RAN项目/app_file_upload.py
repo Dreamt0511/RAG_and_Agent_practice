@@ -37,7 +37,7 @@ if uploader_file is not None:
 
     #使用转圈动画，然后显示加载结果
     with st.spinner("载入数据库中..."):
-        time.sleep(1)
+        time.sleep(0.1)
         result = st.session_state["service"].upload_to_chroma_by_str(text,file_name)
         st.write(result)
 
