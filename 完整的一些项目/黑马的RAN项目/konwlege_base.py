@@ -29,7 +29,8 @@ def save_md5(md5_str):
 #输入字符串获得md5字符串
 def get_md5_str(input_str):
     md5_obj = hashlib.md5()#获得md5对象
-    md5_obj.update(input_str.encode('utf-8')) # 需要编码为字节
+    # 2. 输入数据（需要字节格式）input_str.encode('utf-8') 将字符串转为字节
+    md5_obj.update(input_str.encode('utf-8')) # 需要编码为字节,因为哈希算法只能处理字节数据，不能直接处理字符串
     md5_value = md5_obj.hexdigest()#获取16进制字符串
 
     return md5_value
@@ -46,7 +47,7 @@ class KnowledgeBaseService():
             separators= config.separators
         )
         self.chroma = Chroma(
-            embedding_function= DashScopeEmbeddings(),
+            embedding_function= DashScopeEmbeddings(model=config.embedding_model_name),
             collection_name= config.collection_name,
             persist_directory= config.persist_directory
         )

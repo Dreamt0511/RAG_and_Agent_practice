@@ -16,3 +16,9 @@ separators=[
         ""  # 6. 最后按字符
     ]
 max_split_char_num = 300#文本分割的阈值
+
+#rag
+similarity_threshold = 3 #检索返回匹配的文档数量
+
+embedding_model_name = "text-embedding-v4"
+chat_model_name = "qwen-max"
