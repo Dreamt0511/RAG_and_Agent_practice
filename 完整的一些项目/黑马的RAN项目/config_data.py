@@ -1,6 +1,7 @@
 import os
 
 md5_path = "./md5.txt"
+filesName_path = ".filesName.txt"
 
 # Chorma
 collection_name = "RAG_Project"

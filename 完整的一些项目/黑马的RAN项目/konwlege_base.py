@@ -26,6 +26,11 @@ def save_md5(md5_str):
     with open(config.md5_path,'a',encoding='utf-8') as f:
         f.write(md5_str+'\n')
 
+#记录文件名，写入文件
+def save_fileName(fileName):
+    with open(config.filesName_path,'a',encoding='utf-8') as f:
+        f.write(fileName+'\n')
+
 #输入字符串获得md5字符串
 def get_md5_str(input_str):
     md5_obj = hashlib.md5()#获得md5对象
@@ -69,8 +74,10 @@ class KnowledgeBaseService():
             texts=knowledge_chunks
         )
 
-        #记录Md5值
+        #记录Md5值（方便判断知识库是否已存入数据库）
         save_md5(md5_value)
+        #记录文件名(方便显示已存入的知识库名)
+        save_fileName(filename)
 
         return "[成功]内容已存入向量数据库"
 
