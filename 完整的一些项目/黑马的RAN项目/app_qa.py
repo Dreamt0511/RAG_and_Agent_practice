@@ -113,3 +113,11 @@ with st.sidebar:
     with st.expander("已上传的知识库："):
         for file_name in st.session_state["file_names"]:
             st.write(file_name)
+            
+
+
+
+
+
+
+

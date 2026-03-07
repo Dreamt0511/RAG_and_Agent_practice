@@ -9,8 +9,9 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_community.chat_message_histories import FileChatMessageHistory
-from langchain_core.runnables import RunnableLambda,RunnableParallel
+from langchain_core.runnables import RunnableLambda, RunnableParallel
 from langchain_core.prompts import MessagesPlaceholder
+
 
 class RagService:
 
@@ -65,18 +66,19 @@ class RagService:
             return new_value
 
         chain = (
-            RunnableParallel(  # 显式代替普通字典
-                input=RunnablePassthrough(),
-                context= (RunnableLambda(lambda x: x["input"])  #提取出input进行向量检索
-                         | retriever
-                         | RunnableLambda(format_document)
-                        )
-            )
-            | RunnableLambda(print_input_to_prompt) #打印上一个的输出，方便转换成下一个的输入
-            | RunnableLambda(format_prompt) #提取相关内容，转换成下一个的输入
-            | self.prompt_template
-            | self.chat_model
-            | StrOutputParser()
+                RunnableParallel(  # 显式代替普通字典
+                    input=RunnablePassthrough(),
+                    context=(RunnableLambda(lambda x: x["input"])  # 提取出input进行向量检索
+                             | retriever
+                             | RunnableLambda(print_input_to_prompt)
+                             | RunnableLambda(format_document)
+                             )
+                )
+                # | RunnableLambda(print_input_to_prompt) #打印上一个的输出，方便转换成下一个的输入
+                | RunnableLambda(format_prompt)  # 提取相关内容，转换成下一个的输入
+                | self.prompt_template
+                | self.chat_model
+                | StrOutputParser()
         )
 
         conversation_chain = RunnableWithMessageHistory(
@@ -91,10 +93,9 @@ class RagService:
 
 if __name__ == "__main__":
     session_config = config.session_config
-    res = RagService().chain.stream({"input":"我一共问了你哪些问题，说出全部问题，不要遗漏"},session_config)
+    res = RagService().chain.stream({"input": "记住我，我叫Dreamt"}, session_config)
     for chunk in res:
         print(chunk, end="", flush=True)
-
 
 """
 【完整数据流转过程】
