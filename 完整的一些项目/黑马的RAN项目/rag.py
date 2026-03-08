@@ -93,7 +93,7 @@ class RagService:
 
 if __name__ == "__main__":
     session_config = config.session_config
-    res = RagService().chain.stream({"input": "记住我，我叫Dreamt"}, session_config)
+    res = RagService().chain.stream({"input": "我问过你哪些问题"}, session_config)
     for chunk in res:
         print(chunk, end="", flush=True)
 
