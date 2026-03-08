@@ -1,0 +1,5 @@
+2026-03-08 02:01:32,517 - agent - INFO - middleware.py:39 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-08 02:01:32,521 - agent - DEBUG - middleware.py:41 - [log_before_model]HumanMessage | 首次使用扫地机器人需要做什么？
+2026-03-08 02:01:44,105 - agent - INFO - middleware.py:18 - [tool monitor]执行工具：rag_summarize
+2026-03-08 02:01:44,107 - agent - INFO - middleware.py:19 - [tool monitor]传入参数：{'query': '首次使用扫地机器人准备工作'}
+2026-03-08 02:01:45,445 - agent - ERROR - middleware.py:30 - 工具rag_summarize调用失败，原因：[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028) in query.
