@@ -1,0 +1,8 @@
+如果工具具有精心选择的名称、描述和args_schema，模型将表现得更好。
+LangChain支持从以下几种方式创建工具
+1.Tool装饰器的函数---这是最常见的。
+2.通过从BaseTool 子类化-这是最灵活的方法，它提供了最大的控制程度，但代价是需要付出更多的努力和编写更多的代码。
+3.从MCP的服务端获得工具
+视频链接：
+【【AI大模型】🚀全网最新版“LangChain1.0✚LangGraph1.0”企业级Agent智能体开发实战教程！（马士兵-码士集团）】
+https://www.bilibili.com/video/BV18KULB5EcP?p=15&vd_source=8270dac49dcebe01a55868cae7bc3c79

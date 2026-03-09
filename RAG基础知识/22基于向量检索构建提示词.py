@@ -41,6 +41,7 @@ reference_list = []
 res = vector_store.similarity_search(
     q,5
 )
+
 #添加相关信息进列表
 for doc in res:
     reference_list.append(doc.page_content)
