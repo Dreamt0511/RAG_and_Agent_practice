@@ -18,7 +18,7 @@ agent = create_agent(
 )
 
 res = agent.invoke({"messages":[
-    {"role":"user","content":"现在是什么时间"}
+    {"role":"user","content":"帮我查一下重庆现在的时间"}
 ]})
 
 
