@@ -21,7 +21,11 @@ res = agent.invoke({"messages":[
     {"role":"user","content":"现在是什么时间"}
 ]})
 
-message = res["messages"][-1].content
-print(res)
-print(f"\nAI回答:{message}")
 
+# message = res["messages"][-1].content
+# print(res)
+# print(f"\nAI回答:{message}")
+
+#使用pretty_print()输出
+for msg in res["messages"]:
+    msg.pretty_print()

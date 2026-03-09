@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="700a89be-59de-49a1-8045-d8dbc53096fa" name="更改" comment="11">
-      <change beforePath="$PROJECT_DIR$/RAG基础知识/22基于向量检索构建提示词.py" beforeDir="false" afterPath="$PROJECT_DIR$/RAG基础知识/22基于向量检索构建提示词.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/个人笔记.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agent基础知识/其他课程/02工具的定义.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agent基础知识/其他课程/data/AI时代不会淘汰程序员的原因.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAG其他示例/加载网页内容的RAG实现.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agent基础知识/agent个人笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/Agent基础知识/agent个人笔记.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agent基础知识/其他课程/01agent查询当前时间示例.py" beforeDir="false" afterPath="$PROJECT_DIR$/Agent基础知识/其他课程/01agent查询当前时间示例.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,14 +20,24 @@
       <entry key="_D:/U 盘/RAG和Agent大模型应用开发" value="3AfCJhr5RXKMCifOFWLHHMkRbh6" />
     </persistenceIdMap>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="3AfCJhr5RXKMCifOFWLHHMkRbh6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -30,11 +45,22 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.02工具的定义.executor": "Run",
+    "Python.加载网页内容的RAG实现.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/U 盘/RAG和Agent大模型应用开发/Agent基础知识/其他课程/data",
+    "settings.editor.selected.configurable": "editor.preferences.inline.completion"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\U 盘\RAG和Agent大模型应用开发\Agent基础知识\其他课程\data" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
