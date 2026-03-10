@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="700a89be-59de-49a1-8045-d8dbc53096fa" name="更改" comment="学习agent基础知识-1">
-      <change afterPath="$PROJECT_DIR$/Agent基础知识/其他/03.Context-动态注入系统提示词-dynamic_prompt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Agent基础知识/其他/04.自定义中间件的实现-模型切换功能.py" afterDir="false" />
+    <list default="true" id="700a89be-59de-49a1-8045-d8dbc53096fa" name="更改" comment="学习agent基础知识-2">
+      <change afterPath="$PROJECT_DIR$/Agent基础知识/其他/00-查看PostgreSQL数据库用户信息.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agent基础知识/其他/05-shot-term-memory短期记忆-state管理.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agent基础知识/其他/06-持久化记忆方案-累积发送历史对话.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agent基础知识/其他/07-agent长历史对话处理一剪枝操作Trim messages.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agent基础知识/其他/08-使用 SummarizationMiddleware总结对话历史.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agent基础知识/其他/09-在工具中访问短期记忆（state）.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agent基础知识/其他/01agent查询当前时间示例.py" beforeDir="false" afterPath="$PROJECT_DIR$/Agent基础知识/其他/01agent查询当前时间示例.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agent基础知识/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/Agent基础知识/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agent基础知识/agent个人笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/Agent基础知识/agent个人笔记.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/草稿纸.py" beforeDir="false" afterPath="$PROJECT_DIR$/草稿纸.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,22 +45,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.01agent查询当前时间示例.executor&quot;: &quot;Run&quot;,
-    &quot;Python.02工具的定义.executor&quot;: &quot;Run&quot;,
-    &quot;Python.03.Context.executor&quot;: &quot;Run&quot;,
-    &quot;Python.加载网页内容的RAG实现.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/U 盘/RAG和Agent大模型应用开发&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.00-查看PostgreSQL数据库用户信息.executor": "Run",
+    "Python.01agent查询当前时间示例.executor": "Run",
+    "Python.02工具的定义.executor": "Run",
+    "Python.03.Context.executor": "Run",
+    "Python.06-持久化记忆方案.executor": "Run",
+    "Python.07-agent长历史对话处理一剪枝操作Trim messages.executor": "Run",
+    "Python.加载网页内容的RAG实现.executor": "Run",
+    "Python.草稿纸.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/U 盘/RAG和Agent大模型应用开发",
+    "settings.editor.selected.configurable": "editor.preferences.inline.completion"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\U 盘\RAG和Agent大模型应用开发\Agent基础知识\其他课程\data" />
@@ -102,14 +112,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773071956816</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="学习agent基础知识-2">
+      <option name="closed" value="true" />
+      <created>1773076933109</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1773076933109</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <MESSAGE value="11" />
     <MESSAGE value="学习agent基础知识-1" />
-    <option name="LAST_COMMIT_MESSAGE" value="学习agent基础知识-1" />
+    <MESSAGE value="学习agent基础知识-2" />
+    <option name="LAST_COMMIT_MESSAGE" value="学习agent基础知识-2" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
