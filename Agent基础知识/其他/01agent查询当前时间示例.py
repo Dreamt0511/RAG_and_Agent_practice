@@ -17,9 +17,13 @@ agent = create_agent(
     tools= [get_current_time],
 )
 
-res = agent.invoke({"messages":[
-    {"role":"user","content":"帮我查一下重庆现在的时间"}
-]})
+#保险写法
+# res = agent.invoke({"messages":[
+#     {"role":"user","content":"帮我查一下重庆现在的时间"}
+# ]})
+
+#新写法
+res = agent.invoke({"messages":"帮我查一下重庆现在的时间"})
 
 
 # message = res["messages"][-1].content
