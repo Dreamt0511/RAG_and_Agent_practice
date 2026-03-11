@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="700a89be-59de-49a1-8045-d8dbc53096fa" name="更改" comment="学习agent基础知识-3">
+      <change afterPath="$PROJECT_DIR$/Agent基础知识/其他/10-在工具中修改短期记忆（context）.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agent基础知识/其他/01agent查询当前时间示例.py" beforeDir="false" afterPath="$PROJECT_DIR$/Agent基础知识/其他/01agent查询当前时间示例.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agent基础知识/其他/08-使用 SummarizationMiddleware总结对话历史.py" beforeDir="false" afterPath="$PROJECT_DIR$/Agent基础知识/其他/08-使用 SummarizationMiddleware总结对话历史.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agent基础知识/其他/09-在工具中访问短期记忆（state）.py" beforeDir="false" afterPath="$PROJECT_DIR$/Agent基础知识/其他/09-在工具中访问短期记忆（state）.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/rag评估.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/重排序模型.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +50,7 @@
     "Python.07-agent长历史对话处理一剪枝操作Trim messages.executor": "Run",
     "Python.08-使用 SummarizationMiddleware总结对话历史.executor": "Run",
     "Python.09-在工具中访问短期记忆（state）.executor": "Run",
+    "Python.10-在工具中修改短期记忆.executor": "Run",
     "Python.加载网页内容的RAG实现.executor": "Run",
     "Python.草稿纸.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -124,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773158217506</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="学习agent基础知识-3">
+      <option name="closed" value="true" />
+      <created>1773204047776</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1773204047776</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
