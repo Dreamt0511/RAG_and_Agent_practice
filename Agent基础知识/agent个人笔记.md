@@ -10,3 +10,7 @@ https://www.bilibili.com/video/BV18KULB5EcP?p=15&vd_source=8270dac49dcebe01a5586
 二.PostgreSQL相关：
 1.在 psql 中，可以使用元命令 \dt 来列出当前数据库里的所有表
 2。\q 断开连接
+
+三、为了防止输入给大模型的参考文档太长溢出模型的上下文窗口，要在发送给大模型之前大概检查一下输入文本的token数
+可以使用官方Tokenizer
+import tiktoken  # OpenAI的tokenizer

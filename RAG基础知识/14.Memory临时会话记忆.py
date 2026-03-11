@@ -21,12 +21,13 @@ def print_prompt(prompt):
     return prompt
 
 
-base_chain = prompt | print_prompt | model | str_parser
+base_chain = prompt | model | str_parser
 
 store = {}
 def get_history(sessionId):
     if sessionId not in store:
         store[sessionId] = InMemoryChatMessageHistory()
+    print(f"\n\nstore存储的消息长度为\n{len(store[sessionId].messages)}\n消息内容\n{store[sessionId]}\n")
     return store[sessionId]
 
 chain_with_history = RunnableWithMessageHistory(
