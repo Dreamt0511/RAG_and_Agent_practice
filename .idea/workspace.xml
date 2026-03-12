@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="700a89be-59de-49a1-8045-d8dbc53096fa" name="更改" comment="学习agent基础知识-4">
-      <change afterPath="$PROJECT_DIR$/Agent基础知识/其他/mcp/12.通过wrap_tool_call 中间件处理工具错误.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agent基础知识/langgraph/01-checkpoint示例.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Agent基础知识/其他/Long-term memory/03-提供runtime访问历史记忆store.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agent基础知识/其他/11-结构化输出.py" beforeDir="false" afterPath="$PROJECT_DIR$/Agent基础知识/其他/11-结构化输出.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agent基础知识/agent个人笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/Agent基础知识/agent个人笔记.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +43,10 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.00-查看PostgreSQL数据库用户信息.executor": "Run",
+    "Python.01-checkpoint示例.executor": "Run",
     "Python.01agent查询当前时间示例.executor": "Run",
     "Python.02工具的定义.executor": "Run",
+    "Python.03-提供runtime访问历史记忆store.executor": "Run",
     "Python.03.Context.executor": "Run",
     "Python.06-持久化记忆方案.executor": "Run",
     "Python.07-agent长历史对话处理一剪枝操作Trim messages.executor": "Run",
@@ -142,7 +145,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773305628417</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="学习agent基础知识-4">
+      <option name="closed" value="true" />
+      <created>1773307672364</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1773307672364</updated>
+    </task>
+    <task id="LOCAL-00009" summary="学习agent基础知识-4">
+      <option name="closed" value="true" />
+      <created>1773307814528</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1773307814528</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

@@ -15,3 +15,30 @@ https://www.bilibili.com/video/BV18KULB5EcP?p=15&vd_source=8270dac49dcebe01a5586
 可以使用官方Tokenizer
 import tiktoken  # OpenAI的tokenizer
 
+四、静态的context和动态的state
+参考链接：https://docs.langchain.com/oss/python/migrate/langchain-v1#migrate-to-create_agent
+Runtime context
+当你调用代理时，通常需要传递两种类型的数据：
+对话过程中动态变化的状态（例如，消息历史）
+对话过程中不会改变的静态上下文（例如用户元数据）
+In v1, static context is supported by setting the context parameter to invoke and stream.
+代码示例
+"""
+from dataclasses import dataclass
+from langchain.agents import create_agent
+@dataclass
+class Context:
+    user_id: str
+    session_id: str
+
+agent = create_agent(
+    model=model,
+    tools=tools,
+    context_schema=Context  
+)
+
+result = agent.invoke(
+    {"messages": [{"role": "user", "content": "Hello"}]},
+    context=Context(user_id="123", session_id="abc")
+)
+"""
