@@ -14,3 +14,4 @@ https://www.bilibili.com/video/BV18KULB5EcP?p=15&vd_source=8270dac49dcebe01a5586
 三、为了防止输入给大模型的参考文档太长溢出模型的上下文窗口，要在发送给大模型之前大概检查一下输入文本的token数
 可以使用官方Tokenizer
 import tiktoken  # OpenAI的tokenizer
+

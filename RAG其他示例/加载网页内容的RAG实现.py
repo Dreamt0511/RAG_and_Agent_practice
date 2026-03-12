@@ -1,5 +1,6 @@
 """
 这个主要是爬取网页内容然后进行rag
+目前只关注了网页内容加载的部分，剩下的rag流程待定
 参考链接：https://docs.langchain.com/oss/python/langchain/rag#expand-for-full-code-snippet
 """
 
