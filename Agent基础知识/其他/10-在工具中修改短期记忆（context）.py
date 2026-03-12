@@ -1,6 +1,5 @@
 from langchain.tools import tool, ToolRuntime
 from langchain_community.chat_models import ChatTongyi
-from langchain_core.runnables import RunnableConfig
 from langchain.messages import ToolMessage
 from langchain.agents import create_agent, AgentState
 from langgraph.types import Command
