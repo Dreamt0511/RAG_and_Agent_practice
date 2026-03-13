@@ -5,9 +5,14 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_community.chat_message_histories import FileChatMessageHistory
 import os
 """
+消息过长可以采用剪枝，参考链接：https://reference.langchain.com/python/langchain-core/messages/utils/trim_messages
 只需要提供 get_history 函数返回一个支持 add_message 的历史对象
 RunnableWithMessageHistory 内部会自动调用 add_user_message 和 add_ai_message
 FileChatMessageHistory 的 add_message 方法负责写入文件
+
+此外长期记忆应该存到数据库，在实际生产环境都需要持久化的存储数据库。
+langchain 提供了很多基于其他存储系统的扩展依赖，例如 redis、kafka、MongoDB 等。
+from langchain_community.chat_message_histories import RedisChatMessageHistory 就是使用redis存储
 """
 
 # 创建存储历史对话的目录
