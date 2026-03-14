@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="700a89be-59de-49a1-8045-d8dbc53096fa" name="更改" comment="多智能体-subagent的两种实现模式">
-      <change afterPath="$PROJECT_DIR$/Agent基础知识/其他/多智能体/03-subagent-主Agent和子Agent之间的通信.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Agent基础知识/其他/多智能体/04-Handoffs-Single agent with middleware.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Agent基础知识/其他/多智能体/05-Handoffs-Multiple agent subgraphs.py" afterDir="false" />
+    <list default="true" id="700a89be-59de-49a1-8045-d8dbc53096fa" name="更改" comment="多智能体-handoffs">
+      <change afterPath="$PROJECT_DIR$/Agent基础知识/langgraph/00-用langgraph实现的rag工作流.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Agent基础知识/其他/多智能体/05-Handoffs-Multiple agent subgraphs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Agent基础知识/其他/多智能体/05-Handoffs-Multiple agent subgraphs.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +42,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.00-查看PostgreSQL数据库用户信息.executor": "Run",
+    "Python.00-用langgraph实现的rag工作流.executor": "Run",
     "Python.01-checkpoint示例.executor": "Run",
     "Python.01agent查询当前时间示例.executor": "Run",
     "Python.02工具的定义.executor": "Run",
@@ -190,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773467301682</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="多智能体-handoffs">
+      <option name="closed" value="true" />
+      <created>1773499179136</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1773499179136</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -201,7 +209,8 @@
     <MESSAGE value="学习agent基础知识-3" />
     <MESSAGE value="学习agent基础知识-4" />
     <MESSAGE value="多智能体-subagent的两种实现模式" />
-    <option name="LAST_COMMIT_MESSAGE" value="多智能体-subagent的两种实现模式" />
+    <MESSAGE value="多智能体-handoffs" />
+    <option name="LAST_COMMIT_MESSAGE" value="多智能体-handoffs" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

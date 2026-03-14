@@ -1,7 +1,7 @@
 """
 https://docs.langchain.com/oss/python/langchain/multi-agent/handoffs#multiple-agent-subgraphs
 """
-
+import logging
 from typing import Literal
 from langchain.agents import AgentState, create_agent
 from langchain.messages import AIMessage, ToolMessage
@@ -11,6 +11,9 @@ from langgraph.types import Command
 from typing_extensions import NotRequired
 from langchain_community.chat_models.tongyi import ChatTongyi
 
+
+# ✅ 必须配置 basicConfig，否则不会显示
+logging.basicConfig(level=logging.INFO)
 
 # 1. Define state with active_agent tracker
 class MultiAgentState(AgentState):
@@ -46,7 +49,7 @@ for msg in reversed(messages):
 
 
 #主要是更新active_agent为support_agent，这样在route_after+agent的时候就能跳转到support节点
-@tool(description="Transfer to the support agent.")
+@tool(description="转换到技术支持agent")
 def transfer_to_support(
     runtime: ToolRuntime,
 ) -> Command:
@@ -84,12 +87,14 @@ support_agent = create_agent(
 def call_sales_agent(state: MultiAgentState) -> Command:
     """Node that calls the sales agent."""
     response = sales_agent.invoke(state)
+    logging.info(f"call_sales_agent返回的response为\n{response}")
     return response
 
 
 def call_support_agent(state: MultiAgentState) -> Command:
     """Node that calls the support agent."""
     response = support_agent.invoke(state)
+    logging.info(f"call_support_agent返回的response为{response}")
     return response
 
 
