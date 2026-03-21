@@ -8,6 +8,11 @@ AI大模型应用开发个人学习笔记
 
 3.langchain官网教程：https://docs.langchain.com/oss/python/langchain/overview
 
-备注：部分代码运行前记得配置本地环境变量
-比如：DASHSCOPE_API_KEY为通义千问平台获取的api_key，在代码的模型调用，联网搜索中都会用到这个api_key
+
+部分环境变量配置如下
+DASHSCOPE_API_KEY= "your_api_key_here"
+Milvus_Token = "your_milvus_token_here"
+
+
+
 
