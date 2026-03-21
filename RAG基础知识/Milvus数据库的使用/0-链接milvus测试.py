@@ -17,3 +17,5 @@ collection = collections[0]
 #获取分区列表
 partitions = client.list_partitions(collection_name=collection)
 print("分区列表:", partitions)
+
+
