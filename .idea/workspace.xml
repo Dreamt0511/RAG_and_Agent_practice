@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="700a89be-59de-49a1-8045-d8dbc53096fa" name="更改" comment="添加用LangGraph实现rag工作流">
-      <change afterPath="$PROJECT_DIR$/Agent基础知识/langgraph/草稿纸.py" afterDir="false" />
+    <list default="true" id="700a89be-59de-49a1-8045-d8dbc53096fa" name="更改" comment="添加milvus向量数据库的使用示例">
+      <change afterPath="$PROJECT_DIR$/RAG基础知识/Milvus数据库的使用/2-混合搜索示例.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agent基础知识/langgraph/langgraph笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/Agent基础知识/langgraph/langgraph笔记.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAG其他示例/CRAG的实现-langchain中间件加milvus.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAG其他示例/加载网页内容的RAG实现.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +207,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773505539137</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="添加milvus向量数据库的使用示例">
+      <option name="closed" value="true" />
+      <created>1774076020763</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1774076020764</updated>
+    </task>
+    <task id="LOCAL-00016" summary="添加milvus向量数据库的使用示例">
+      <option name="closed" value="true" />
+      <created>1774076038145</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1774076038145</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -219,7 +236,8 @@
     <MESSAGE value="多智能体-subagent的两种实现模式" />
     <MESSAGE value="多智能体-handoffs" />
     <MESSAGE value="添加用LangGraph实现rag工作流" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加用LangGraph实现rag工作流" />
+    <MESSAGE value="添加milvus向量数据库的使用示例" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加milvus向量数据库的使用示例" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

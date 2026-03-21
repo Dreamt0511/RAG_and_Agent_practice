@@ -1,0 +1,146 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+.ipynb_checkpoints
+jupyter_notebook_config.py
+
+# Data files and databases
+*.sqlite3
+*.db
+chroma_db/
+
+# Logs
+logs/
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Environment specific
+.env
+.env.local
+.env.dev
+.env.prod
+.env.testing
+.env.staging
+.env.backup
+
+# Configuration files with sensitive data
+config/secrets.yml
+config/secrets.yaml
+
+# Local configuration files
+config/local.yml
+config/local.yaml
+
+# Checkpoints and models
+*.ckpt
+*.pth
+*.h5
+*.bin
+checkpoints/
+models/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Outputs
+output/
+outputs/
+results/
+
+# Cache directories
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Package manager
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Documentation
+docs/_build/
+
+# Testing
+.pytest_cache/
+.coverage*
+htmlcov/
+.cov-report/
+
+# Large files
+*.pdf
+*.docx
+*.xlsx
+*.zip
+*.tar
+*.gz
+
+# Specific to your project
+*.pyc
+*.pyo
+*.pyd
+*.py~
+*.bak
+*.orig
+*.rej
+
+# Exclude large data files but keep small config files in data/ dir
+data/*.*
+!data/*.py
+!data/*.yml
+!data/*.yaml
+!data/*.json
+!data/*.txt
+
+# Exclude specific files from your project
+.filesName.txt
+*.avif
