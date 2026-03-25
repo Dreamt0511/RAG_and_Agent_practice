@@ -9,7 +9,7 @@ AI大模型应用开发个人学习笔记
 3.langchain官网教程：https://docs.langchain.com/oss/python/langchain/overview
 
 
-部分环境变量配置如下
+部分环境变量配置如下（代码里不是加载.env文件读取的环境变量，环境变量配置在电脑上，使用os.getenv()直接读取）
 DASHSCOPE_API_KEY= "your_api_key_here"
 Milvus_Token = "your_milvus_token_here"
 
